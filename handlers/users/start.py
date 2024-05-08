@@ -7,7 +7,6 @@ from keyboards.inline.main_inline_keyboards import social_network_inlint_buttons
 
 
 
-
 @dp.message(CommandStart())
 async def bot_start(message: types.Message):
     text = "Assalomu alaykum! Tanlang."
@@ -22,7 +21,7 @@ async def social_network(message: types.Message):
     
 
 @dp.message(F.text == "📞 Biz bilan bog'lanish")
-async def social_network(message: types.Message):
+async def contact(message: types.Message):
     text = """Telegram: @factorbooks_info
 
 📞 + 998950359511
@@ -31,3 +30,9 @@ async def social_network(message: types.Message):
     await message.answer(text)
     
 
+@dp.message(F.text == "📃 Mening buyurtmalarim")
+async def my_orders(message: types.Message):
+    text = "🤷‍♂️ Sizda hali buyurtmalar mavjud emas."
+    await message.answer(text)
+
+    

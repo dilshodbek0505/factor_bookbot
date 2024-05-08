@@ -12,7 +12,8 @@ async def main() -> None:
     
     # Ma'lumotlar bazasini yaratish
     try:
-        ... # yangi table larni yaratish
+        db.create_user_table()
+        db.create_book_table()
     except Exception as err:
         logging.exception(err)
 
